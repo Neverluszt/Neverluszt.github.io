@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neverluzt Forums</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('your-background-image.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .slide {
+            display: none;
+            transition: opacity 0.5s;
+        }
+        .active {
+            display: block;
+        }
+        .slide h1 {
+            font-size: 2em;
+            color: #8A2BE2; /* Ungu */
+        }
+        .slide p {
+            font-size: 1.2em;
+        }
+        .staff-member, .member {
+            margin: 10px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 10px;
+        }
+        .grid-item {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border: 1px solid #333;
+        }
+        .join-button, .biodata-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: white;
+            background-color: #1E90FF; /* Biru */
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="slide active" id="slide1">
+            <h1>Selamat Datang di Neverluzt Forums</h1>
+            <p>Forum diskusi modern dengan tema ungu, hitam, dan biru.</p>
+        </div>
+        <div class="slide" id="slide2">
+            <h1>Staf dan Anggota</h1>
+            <div class="staff-member">
+                <h2>Nama Staf 1</h2>
+                <p>Deskripsi Staf 1</p>
+            </div>
+            <div class="member">
+                <h2>Nama Anggota 1</h2>
+                <p>Deskripsi Anggota 1</p>
+            </div>
+        </div>
+        <div class="slide" id="slide3">
+            <h1>Foto Grid</h1>
+            <div class="grid-container">
+                <div class="grid-item">Foto 1</div>
+                <div class="grid-item">Foto 2</div>
+                <div class="grid-item">Foto 3</div>
+            </div>
+        </div>
+        <a href="https://chat.whatsapp.com/your-whatsapp-group-link" class="join-button">Join Grup WhatsApp</a>
+        <a <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd6XDJGrzXWtGCVGjaE-I_hb2tNW7g-tZ9_SGTGZJO3bMpvXg/viewform?embedded=true" width="640" height="850" frameborder="0" marginheight="0" marginwidth="0">Memuat…</iframe>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }, 5000); // Slide change every 5 seconds
+    </script>
+</body>
+          </html>
+                  
